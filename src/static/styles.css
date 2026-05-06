@@ -20,6 +20,7 @@
   --border: #e0e0e0;
   --border-light: #f0f0f0;
   --border-focus: #d0d0d0;
+  --input-bg: #ffffff;
 
   /* Feedback colors */
   --success: #2e7d32;
@@ -30,6 +31,22 @@
   --error-light: #ffebee;
   --info: #0c5460;
   --info-light: #d1ecf1;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] {
+  --background: #121212;
+  --surface: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --border: #333333;
+  --border-light: #2a2a2a;
+  --border-focus: #444444;
+  --input-bg: #2a2a2a;
+  --success-light: #1b3a1d;
+  --warning-light: #3a2e00;
+  --error-light: #3a1010;
+  --info-light: #0a2328;
 }
 
 * {
@@ -492,6 +509,8 @@ footer {
   border-radius: 20px 0 0 20px;
   font-size: 0.85rem;
   transition: all 0.3s ease;
+  background-color: var(--input-bg);
+  color: var(--text-primary);
 }
 
 .search-box input:focus {
@@ -662,5 +681,22 @@ footer {
 }
 
 #logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Dark mode toggle button */
+#dark-mode-toggle {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  line-height: 1;
+  margin-right: 8px;
+}
+
+#dark-mode-toggle:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
